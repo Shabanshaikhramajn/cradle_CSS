@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+background-color: blueviolet;
+display: grid;
+place-items: center;
+ }
+
+
+ .cradle{
+    margin-top: 5rem;
+border-radius: .7rem;
+    width: 40vw;
+    height: 20px;
+    background-color: white;
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.cradle div{
+    height: 20vw;
+    background-color: white;
+    width: 10px;
+    position: relative;
+    top: 1rem;
+}
+
+.cradle div:first-child{
+    animation: shaban 2s 1s linear infinite ;
+    transform-origin: top left
+}
+
+.cradle div:last-child{
+    animation: shaikh 2s linear 1s infinite ;
+    
+    transform-origin: top right;
+
+    
+}
+
+.cradle div::after{
+    content: "";
+   position: absolute;
+   bottom: -6.5rem;
+    left: -3rem;
+   width: 6.78rem;
+   height: 6.78rem;
+    border-radius: 50%;
+    
+    background-color: green;
+
+}
+
+@keyframes shaban {
+    0%{
+       rotate: 0deg;
+    }
+    25%{
+       rotate: 30deg;
+    }
+    50%{
+       rotate: 0deg;
+    }
+ 100%{
+        rotate: 0deg;
+        
+    }
+}
+
+@keyframes shaikh {
+    0%{
+       rotate: 0deg;
+    }
+    25%{
+       rotate: -30deg;
+    }
+    50%{
+       rotate: 0deg;
+    }
+ 100%{
+        rotate: 0deg;
+        
+    }
+}
+
+
+
+
+
+</style>
+
+
+
+</head>
+<body>
+
+    <div class="cradle">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>
